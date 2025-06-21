@@ -1,8 +1,8 @@
-Flask
-requests
-tensorflow
-keras
-numpy
-Pillow
-gdown
-gunicorn
+Flask==2.2.5
+requests==2.31.0
+tensorflow==2.13.0
+keras==2.13.1
+numpy==1.25.1
+Pillow==10.0.0
+gdown==4.7.1
+gunicorn==20.1.0
