@@ -1,11 +1,17 @@
 # -*- coding: utf-8 -*-
 import os
 import gdown
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
+import os
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
 from PIL import Image
+
+# … all your other routes …
+
+# Note: no `if __name__ == "__main__":` block needed!
+
 
 # ====== Konfigurasi Model dari Google Drive ======
 MODEL_PATH = 'resnet50_malnutrition.h5'
@@ -56,6 +62,8 @@ def predict():
                            image_path=image_url,
                            probs=preds,
                            classes=classes)
+    app = Flask(__name__)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+@app.route("/", methods=["GET"])
+def home():
+    return render_template("index.html")  # adjust to your template
