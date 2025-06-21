@@ -1,9 +1,0 @@
-# .vercelignore
-.env
-.git/
-node_modules/
-venv/
-*.pyc
-__pycache__/
-tests/
-large_data/
