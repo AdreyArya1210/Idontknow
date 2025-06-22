@@ -1,0 +1,29 @@
+# Exclude files and folders that shouldn't be uploaded or scanned by Vercel
+.env
+.git/
+node_modules/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+.DS_Store
+.idea/
+.vscode/
+
+# Exclude any local caches, test folders, or large datasets
+tests/
+test_*/
+coverage/
+.cache/
+build/
+dist/
+
+# Exclude data or vendor folders if you vendor wheels
+vendor/
+large_data/
+
+# If you have notebook checkpoint files
+.ipynb_checkpoints/
